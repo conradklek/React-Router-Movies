@@ -1,7 +1,5 @@
-// make home button work
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export default function SavedList(props) {
   return (
@@ -11,8 +9,8 @@ export default function SavedList(props) {
         {props.list.map((movie) => (
           <span className="saved-movie">{movie.title}</span>
         ))}
-        <div className="home-button">
-          <Link to="/">Home</Link>
+        <div className="home-button" onClick={() => history.goBack()}>
+          Home
         </div>
       </div>
     </Router>
